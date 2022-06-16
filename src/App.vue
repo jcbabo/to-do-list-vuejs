@@ -1,9 +1,9 @@
+/* eslint-disable space-before-function-paren */
 <template>
-  <div class="app-container">
+  <!-- <div class="app-container">
     <component :is="layout" class="dynamic-layout">
-      <router-view />
     </component>
-  </div>
+  </div> -->
   <div class="page">
     <div class="principal-content">
       <div class="title-page">
@@ -11,12 +11,11 @@
         <h5>Agora em VueJs!</h5>
       </div>
       <div class="todo-input">
-        <input type="text" name="todo-input" v-model="todo" @keyup.enter="addTask(todo)" />
-        <button class="btn-input" @click="addTask(todo)">Inserir
-        </button>
+        <InputVue></InputVue>
+        <AddButtonVue></AddButtonVue>
       </div>
       <div class="task-grid">
-        <input type="checkbox" />
+        <TaskFieldVue></TaskFieldVue>
         <ul>
           <li>As tarefas aparecerão aqui</li>
         </ul>
@@ -25,60 +24,73 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import InputVue from './src/components/Input.vue'
+import AddButtonVue from './components/AddButton.vue'
+import TaskFieldVue from './components/TaskField.vue'
+import { defineComponent } from 'vue'
 
-export default {
-  name: 'Todo-List',
-
-  created() {
-
-    document.title = 'Application To-do List'
-
+export default defineComponent({
+  name: 'App',
+  // eslint-disable-next-line space-before-function-paren
+  setup() {
+    const layout = 'teste'
   },
+  components: { TaskFieldVue }
+})
 
-  data() {
-    return {
-      id: 0, //id das tarefas listadas
-      todo: '', // nome da tarefa que será vinculada ao input
-      todos: [], // array vazio que armazenará as tarefas
-    }
-  },
+// export default {
+//   name: 'Todo-List',
 
-  methods: {
-    //gera uma id novo para cada tarefa
-    genId() {
-      return (this.id += 1); //incrementa o data property "id", iniciando no '1'
-    },
+//   created() {
 
-    //adiciona uma nova tarefa ao array 'todos'
-    addTask(todo) {
-      this.todos.push({
-        id: this.genId(), //gera um novo id
-        name: todo, //o nome da tarefa
-        done: false, //para que a tarefa apareça como 'não completada' na lista
-      });
-      this.todo = ""; //limpa os dados do input
-    },
+//     document.title = 'Application To-do List'
 
-    //pega o índice da tarefa corrente para facilita uma explusão posterior
-    getIndex(todo) {
-      //a variável recebe a tarefa como parâmetro, procura seu índice e retorna ele
-      let index = this.todos.findIndex(item => item.id === todo.id);
-      return index;
-    },
+//   },
 
-    //exclui uma tarefa a partir de seu índice atraveś de um splice no array
-    removeTask(todo) {
-      let index = this.getIndex(todo); //a variável recebe o índice da tarefa em questão
-      this.todos.splice(index, 1); //faz um splice no array e remove o índice da variável "index"
-    },
+//   data() {
+//     return {
+//       id: 0, //id das tarefas listadas
+//       todo: '', // nome da tarefa que será vinculada ao input
+//       todos: [], // array vazio que armazenará as tarefas
+//     }
+//   },
 
-    //recebe uma tarefa como parâmetro de entrada e muda seu status
-    taskComplete(todo) {
-      todo.done = !todo.done
-    },
-  }
-}
+//   methods: {
+//     //gera uma id novo para cada tarefa
+//     genId() {
+//       return (this.id += 1); //incrementa o data property "id", iniciando no '1'
+//     },
+
+//     //adiciona uma nova tarefa ao array 'todos'
+//     addTask(todo) {
+//       this.todos.push({
+//         id: this.genId(), //gera um novo id
+//         name: todo, //o nome da tarefa
+//         done: false, //para que a tarefa apareça como 'não completada' na lista
+//       });
+//       this.todo = ""; //limpa os dados do input
+//     },
+
+//     //pega o índice da tarefa corrente para facilita uma explusão posterior
+//     getIndex(todo) {
+//       //a variável recebe a tarefa como parâmetro, procura seu índice e retorna ele
+//       let index = this.todos.findIndex(item => item.id === todo.id);
+//       return index;
+//     },
+
+//     //exclui uma tarefa a partir de seu índice atraveś de um splice no array
+//     removeTask(todo) {
+//       let index = this.getIndex(todo); //a variável recebe o índice da tarefa em questão
+//       this.todos.splice(index, 1); //faz um splice no array e remove o índice da variável "index"
+//     },
+
+//     //recebe uma tarefa como parâmetro de entrada e muda seu status
+//     taskComplete(todo) {
+//       todo.done = !todo.done
+//     },
+//   }
+// }
 
 </script>
 
@@ -107,14 +119,6 @@ export default {
 //   padding-bottom: 14px;
 // }
 
-// .todo-input {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   width: fit-content;
-//   column-gap: 10px;
-//   padding: 30px 0px;
-// }
-
 // input, button {
 //   color: $text;
 //   background-color: $bg-input;
@@ -122,10 +126,6 @@ export default {
 //   border-radius: 3px;
 //   box-shadow: none;
 //   padding: 5px 10px;
-// }
-
-// .btn-input {
-//   width: 60px;
 // }
 
 // .task-grid {
