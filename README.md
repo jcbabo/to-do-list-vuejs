@@ -8,13 +8,21 @@ Sobre essa ToDo list, não há nada de novo o que mostrar de diferente da outra 
 
 A base será a mesma: uma caixa de texto com um input, um botão para inserir a tarefa, a lista de tarefas e suas funções.
 
+===================================================================================================================
 
-====================================================================================================================
-
-Pretendo sempre ir explicando o avanço da aplicação por aqui.
+## Pretendo sempre ir explicando o avanço da aplicação por aqui
 
 Nesse primeiro commit de desenvolvimento da lógica, implementei os métodos para criação e apagamento de tarefas, para dar a tarefa como concluída e pus o vínculo com o botão "Inserir" e tecla "Enter" para adicionar tarefa.
 
+## Obs.: Recriei o projeto, subi ele novamente e apaguei o repositório antigo em 15/06/22
+
 Pretendo, nos próximos passos:
-- mostrar a tarefa inserida na tela
-- criar componentes com determinadas partes da aplicação e abstrair suas lógicas para arquivos independentes, limpando o código do arquivo inicial e melhorando a organização dos arquivos do projeto.
+
+- continuar editanto a lógica dos componentes de inserir tarefas, editar tarefas e excluir tarefas. Assim como mostrar as tarefas concluídas com um tachado sobre o texto
+- Cria lógica para mostrar o texto da tarefa na tela
+- Estilizar globalmente o layout da aplicação de forma básica
+- Estilizar cada componente conforme ideal
+
+### Itens concluídos
+
+- criar componentes com determinadas partes da aplicação e abstrair suas lógicas para arquivos independentes, limpando o código do arquivo inicial e melhorando a organização dos arquivos do projeto
