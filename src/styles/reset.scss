@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+em,
+img,
+strong,
+var,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    vertical-align: baseline;
+}
+
+// Reseta as bordas do hr, para estiliza-lo utilize o border-top
+hr {
+    border: 0;
+    border-top: 1px solid currentColor;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    overflow-y: scroll;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+input,
+button {
+    font: inherit;
+}
