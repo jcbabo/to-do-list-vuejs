@@ -79,7 +79,7 @@ import TaskArea from '../components/TaskArea.vue'
 
 </script>
 
-<style lang="scss">
+<style lang="scss"></style>
 
 .base-layout {
   display: grid;
