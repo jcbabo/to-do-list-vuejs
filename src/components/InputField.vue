@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineComponent } from 'vue';
 
 interface InputFactoryProps {
   isEmpty: boolean;

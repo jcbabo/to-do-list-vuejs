@@ -14,6 +14,12 @@
 
 .btn-input {
   width: 60px;
+  color: $text;
+  background-color: $bg-input;
+  border: $borders  1px solid;
+  border-radius: 3px;
+  box-shadow: none;
+  padding: 5px 10px;
 }
 
 </style>

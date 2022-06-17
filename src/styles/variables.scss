@@ -1,7 +1,11 @@
-//font-sizes
+// Font-Size
 $font-size-h1: 4rem;
 $font-size-h2: 3.2rem;
+$font-size-h3: 2.4rem;
+$font-size-h4: 2rem;
 $font-size-body1: 1.7rem;
+$font-size-body2: 1.4rem;
+$font-size-tiny: 1.2rem;
 
 
 //colors
@@ -12,14 +16,19 @@ $bg-page: #EEE8AA;
 $bg-input: #FAFAD2;
 
 
-//font
-h1 {
-  font-size: $font-size-h1;
-  line-height: 60px;
-	font-weight: 700;
-}
-
 //layout
 $main-layout-top-spacing: 4rem;
 $main-layout-top-spacing-mobile: 2.4rem;
 $header-height: 7.2rem;
+
+
+// Breakpoints
+$mobile: 320px;
+$mobile-container: 27.2rem;
+$tablet: 768px;
+$tablet-container: 67.2rem;
+$desktop: 1024px; 
+$desktop-container: 80rem;
+$desktop-1280: 1280px;
+$desktop-1440: 1440px;
+$desktop-1920: 1920px;
