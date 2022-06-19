@@ -12,7 +12,7 @@
 
 <style lang="scss">
 
-.btn-input {
+.btn-add {
   width: 60px;
   color: $text;
   background-color: $bg-input;

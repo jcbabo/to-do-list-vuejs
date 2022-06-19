@@ -10,10 +10,7 @@
         <InsertButton></InsertButton>
       </div>
       <div class="task-grid">
-        <TaskArea></TaskArea>
-        <ul>
-          <li>As tarefas aparecerão aqui</li>
-        </ul>
+        <!-- <TaskArea></TaskArea> -->
       </div>
     </div>
   </div>
@@ -79,8 +76,7 @@ import TaskArea from '../components/TaskArea.vue'
 
 </script>
 
-<style lang="scss"></style>
-
+<style lang="scss">
 .base-layout {
   display: grid;
   justify-content: center;
@@ -97,28 +93,30 @@ import TaskArea from '../components/TaskArea.vue'
   .title-page {
     color: $text;
     text-align: center;
+
+    h1 {
+      margin: 0px;
+      font-size: 4rem;
+      padding-bottom: 14px;
+    }
+
+    h4 {
+      margin: 0px;
+      font-size: 1.5rem;
+      padding-bottom: 44px;
+    }
   }
 
-  h1,
-  h5 {
-    margin: 0px;
-    padding-bottom: 14px;
+  .todo-input {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    text-align: center;
+
+    @include min-width($tablet) {
+      display: flex;
+      column-gap: 10px;
+    }
   }
-
-  // .task-grid {
-  //   display: grid;
-  //   grid-template-columns: auto 1fr;
-  //   column-gap: 5px;
-  // }
-
-  // ul {
-  //   margin: 0px;
-  //   list-style-type: none;
-  //   padding: 0px;
-  // }
-
-  // li {
-  //   color: $text;
-  // }
 }
 </style>

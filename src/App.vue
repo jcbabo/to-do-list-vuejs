@@ -20,7 +20,7 @@ export default defineComponent({
   }
 })
 </script>
-./layout/DefaultLayout.vue./layout/DefaultLayout.vue
+
 <style lang="scss">
 :root {
   font-size: 62.5%;

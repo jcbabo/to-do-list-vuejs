@@ -1,8 +1,5 @@
 <template>
-  <input
-    class="input"
-    type="text"
-  />
+  <input class="input-area" type="text" />
 </template>
 
 <script lang="ts" setup>
@@ -12,15 +9,20 @@ interface InputFactoryProps {
   isDurty: boolean;
 }
 
+const taskList = []
+
+// addTask(){
+
+// }
 </script>
 
 <style lang="scss">
-
-.input {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: fit-content;
-  column-gap: 10px;
-  padding: 30px 0px;
+.input-area {
+  color: $text;
+  background-color: $bg-input;
+  border: $borders 1px solid;
+  border-radius: 3px;
+  box-shadow: none;
+  padding: 5px 10px;
 }
 </style>
