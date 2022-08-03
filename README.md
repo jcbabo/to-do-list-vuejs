@@ -20,9 +20,13 @@ Pretendo, nos próximos passos:
 
 - continuar editanto a lógica dos componentes de inserir tarefas, editar tarefas e excluir tarefas. Assim como mostrar as tarefas concluídas com um tachado sobre o texto
 - Cria lógica para mostrar o texto da tarefa na tela
-- Estilizar globalmente o layout da aplicação de forma básica
-- Estilizar cada componente conforme ideal
+
+### Em andamento
+
+- de volta ao desenvolvimento dos componentes. Início do desenvolvimento do botão de inserir a tarefa juntamente com a lógica do campo de input.
+- Estilizar cada componente conforme ideal.
 
 ### Itens concluídos
 
-- criar componentes com determinadas partes da aplicação e abstrair suas lógicas para arquivos independentes, limpando o código do arquivo inicial e melhorando a organização dos arquivos do projeto
+- criar componentes com determinadas partes da aplicação e abstrair suas lógicas para arquivos independentes, limpando o código do arquivo inicial e melhorando a organização dos arquivos do projeto.
+- Estilizar globalmente o layout da aplicação de forma básica.
