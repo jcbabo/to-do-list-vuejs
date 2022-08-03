@@ -3,17 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-
-interface InputFactoryProps {
-  isEmpty: boolean;
-  isDurty: boolean;
-}
-
-const taskList = []
-
-// addTask(){
-
-// }
 </script>
 
 <style lang="scss">

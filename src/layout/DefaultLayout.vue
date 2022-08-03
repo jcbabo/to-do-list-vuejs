@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import InputField from '../components/InputField.vue'
 import InsertButton from '../components/InsertButton.vue'
-import TaskArea from '../components/TaskArea.vue'
+// import TaskArea from '../components/TaskArea.vue'
 
 // export default {
 //   name: 'Todo-List',

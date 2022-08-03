@@ -12,7 +12,7 @@ export default defineComponent({
   name: 'App',
   setup () {
     const layout = shallowRef(DefaultLayout)
-    const componenteLayout = import(`./layout/${layout.value}.vue`)
+    const componentLayout = import(`./layout/${layout.value}.vue`)
 
     return {
       layout
